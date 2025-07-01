@@ -19,7 +19,7 @@ const TaskCard = ({ task }: IProps) => {
               "bg-red-500": task.priority === "high",
             })}
           ></div>
-          <h1> Task :{task.title}</h1>
+          <h1> {task.title}</h1>
         </div>
         <div className="flex gap-3 items-center ">
           <Button variant="link" className="p-0 text-2xl text-red-500">

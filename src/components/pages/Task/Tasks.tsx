@@ -1,7 +1,7 @@
 import { useAppSelector } from "@/redux/hook";
-import TaskCard from "../module/tasks/TaskCard";
+import TaskCard from "../../module/tasks/TaskCard";
 import { selectTasks } from "@/redux/features/task/taskSlice";
-import { AddTaskModal } from "../module/modal/AddTaskModal";
+import { AddTaskModal } from "../../module/modal/AddTaskModal";
 
 const Tasks = () => {
   const tasks = useAppSelector(selectTasks);
@@ -14,7 +14,7 @@ const Tasks = () => {
       <p>Task page is here</p>
       <div className="space-y-5 mt-5">
         {tasks.map((task) => (
-          <TaskCard task={task} id={task.id} />
+          <TaskCard task={task} />
         ))}
       </div>
     </div>
